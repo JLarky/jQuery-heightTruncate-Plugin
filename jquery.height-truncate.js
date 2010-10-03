@@ -18,9 +18,13 @@
 	    var options = $.extend(defaults, options);
 	    return this.each(function() {
 		$this=$(this);
-		var init_h = $.data(this, 'init_h');
-		if (!init_h)
-		    $.data($this, 'init_h', init_h = $this.height());
+		if (options.height)
+		    var init_h = options.height
+		else {
+		    var init_h = $.data(this, 'init_h');
+		    if (!init_h)
+			$.data($this, 'init_h', init_h = $this.height());
+		}
 		var real_h = $this.height("100%").height();
 		if (real_h > init_h) {
 		    var original_text = $.data($this, 'original_text');
