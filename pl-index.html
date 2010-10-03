@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Truncate by Height Plugin</title>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="jquery.height-truncate.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+//////////////////////////// initiate the plugin ////////////////////////////////
+$(document).ready(function(){
+	$('.autoTruncate').heightTruncate(); //by default, it will truncate to its initial width
+	$('.truncateMe').heightTruncate({height:100}); // you can override by passing in your own width
+});
+</script>
+
+<style type="text/css">
+	/*some example styling... you can remove this*/
+	body{ font:22px Arial, Helvetica, sans-serif;}
+	#myParagraphs{width:700px; padding:28px; background-color:#99CCFF; }
+        .autoTruncate{height: 150px;overflow:hidden;}
+</style>
+	
+</head>
+
+<body>
+<h1>Truncate by Height jQuery Plugin</h1>
+<p>This is a simple plugin that will truncate a text block based on a given height. By default, calling .widthTruncate() on a selected element will truncate the text block of text down to amount of lines that can fit into <em>height</em> given in css. You can also pass in a pixel value and it will truncate it to that height. See examples below.</p>
+
+<p><a href="jquery.height-truncate.js">Click here to download the plugin</a></p>
+<div id="myParagraphs">
+<h2>Examples</h2>
+<p class="autoTruncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit augue, malesuada vel sollicitudin a, molestie quis nibh. Suspendisse elementum facilisis neque, ut aliquet tellus sollicitudin ut. Fusce aliquam est ut lorem egestas a consectetur justo malesuada. Sed eleifend volutpat orci in mattis. Duis porttitor nisi in sem rutrum vehicula. In sodales lobortis rutrum. Integer eget metus enim, et accumsan justo. Sed vehicula molestie leo eu scelerisque.</p>
+
+<p class="truncateMe">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit augue, malesuada vel sollicitudin a, molestie quis nibh. Suspendisse elementum facilisis neque, ut aliquet tellus sollicitudin ut. Fusce aliquam est ut lorem egestas a consectetur justo malesuada. Sed eleifend volutpat orci in mattis. Duis porttitor nisi in sem rutrum vehicula. In sodales lobortis rutrum. Integer eget metus enim, et accumsan justo. Sed vehicula molestie leo eu scelerisque.</p>
+
+</div>
+<div>
+THIS IS PLAGIARISM OF <a href="http://www.adamcoulombe.info/lab/jquery/width-truncate/">Truncate by Width jQuery Plugin</a>
+</div>
+
+</body>
+</html>
