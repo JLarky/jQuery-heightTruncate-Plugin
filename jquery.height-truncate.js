@@ -13,7 +13,8 @@
 	    var defaults = {
 		after: '...',
 		offset: 0,
-		throttle: 1000
+		throttle: 1000,
+		dont_srink: false
 	    };
 	    var options = $.extend(defaults, options);
 	    return this.each(function() {
@@ -37,6 +38,9 @@
 		    }
 		    // because of i isn't fit (actually not fitting was our aim in while loop) 
 		    $this.text(original_text.substr(0, (i-1) - options.offset)+options.after);
+		} else {
+		    if (options.dont_srink)
+			$this.height(init_h);
 		}
 	    });
 	}
