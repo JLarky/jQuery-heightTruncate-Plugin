@@ -26,7 +26,7 @@
 		    if (!init_h)
 			$.data($this, 'init_h', init_h = $this.height());
 		}
-		var real_h = $this.height("100%").height();
+		var real_h = $this.height("auto").height();
 		if (real_h > init_h) {
 		    var original_text = $.data($this, 'original_text');
 		    if (!original_text)
